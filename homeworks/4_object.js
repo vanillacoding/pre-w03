@@ -9,7 +9,7 @@
        *
        */
 
-      it("객체 닷 노테이션 키 밸류 만들기", function () {
+      it("객체 데이터 다루기 #1", function () {
         const person = {
           name: "leo",
           job: "operations manager",
@@ -24,7 +24,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 닷 노테이션 키 밸류 만들기", function () {
+      it("객체 데이터 다루기 #2", function () {
         const person = {
           name: "leo",
         };
@@ -38,14 +38,15 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 브라켓 노테이션 키 밸류 만들기", function () {
+      it("객체 데이터 다루기 #3", function () {
         const employee = {
           name: "dm",
           job: "software engineer",
           years: 1,
         };
 
-        employee["id"] = 4;
+        const key = "id";
+        employee[key] = 4;
 
         const result = employee.id;
         const guess = 바코;
@@ -53,7 +54,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 키 밸류 삭제하기", function () {
+      it("객체 데이터 다루기 #4", function () {
         const employee = {
           name: "dm",
           job: "software engineer",
@@ -68,7 +69,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("중첩된 객체 만들기", function () {
+      it("중첩된 객체 다루기 #1", function () {
         const result = {
           name: "Vanilla Coding",
           url: "https://www.vanillacoding.co/",
@@ -87,7 +88,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("중첩된 객체의 키 밸류 접근하기", function () {
+      it("중첩된 객체 다루기 #2", function () {
         const company = {
           name: "Vanilla Coding",
           url: "https://www.vanillacoding.co/",
@@ -103,7 +104,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("중첩된 객체의 키 밸류 접근하기", function () {
+      it("중첩된 객체 다루기 #3", function () {
         const reservation = {
           name: "ken",
           checkInDate: "2024-01-15",
@@ -121,7 +122,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("중첩된 객체의 키 밸류 삭제하기", function () {
+      it("중첩된 객체 다루기 #4", function () {
         const reservation = {
           name: "ken",
           checkInDate: "2024-01-15",
@@ -139,7 +140,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 키 밸류에서 밸류에 함수 실행문 할당할 경우", function () {
+      it("객체와 함수 실행문", function () {
         function sayHello() {
           console.log("디자인을 합니다.");
         }
@@ -156,7 +157,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 키 밸류에서 밸류에 배열 할당할 경우", function () {
+      it("객체와 배열", function () {
         const person = {
           name: "ken",
           job: "ceo",

@@ -9,14 +9,14 @@
        *
        */
 
-      it("배열 만들기", function () {
+      it("배열 만들기 #1", function () {
         const result = [1, 2, 3];
         const guess = 바코;
 
         expect(result).to.eql(guess);
       });
 
-      it("배열 비우기", function () {
+      it("배열 비우기 #2", function () {
         const result = [];
 
         let guess = [1, 2, 3];
@@ -25,7 +25,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 비우기", function () {
+      it("배열 비우기 #3", function () {
         const result = [];
 
         const guess = [1, 2, 3];
@@ -34,7 +34,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 비우기", function () {
+      it("배열 비우기 #4", function () {
         const result = [];
 
         const guess = [1, 2, 3];
@@ -43,7 +43,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 요소 뒤에 추가하기", function () {
+      it("배열 요소 추가하기", function () {
         const result = 바코;
 
         const guess = [1, 2, 3];
@@ -52,16 +52,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 요소 뒤에서 빼기", function () {
-        const result = [1, 2, 3];
-        result.pop();
-
-        const guess = 바코;
-
-        expect(result).to.eql(guess);
-      });
-
-      it("배열 요소 앞에 추가하기", function () {
+      it("배열 요소 추가하기", function () {
         const result = [1, 2, 3];
         result.unshift(5);
 
@@ -70,7 +61,16 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 요소 앞에서 빼기", function () {
+      it("배열 요소 제거하기", function () {
+        const result = [1, 2, 3];
+        result.pop();
+
+        const guess = 바코;
+
+        expect(result).to.eql(guess);
+      });
+
+      it("배열 요소 제거하기", function () {
         const result = [1, 2, 3];
         result.shift();
 
@@ -98,7 +98,7 @@
       it("배열 합치기", function () {
         const arr1 = [1, 2, 3];
         const arr2 = [1, 4, 2];
-        result = arr1.concat(arr2);
+        const result = arr1.concat(arr2);
 
         const guess = 바코;
 
@@ -122,7 +122,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 요소 순서 뒤집기", function () {
+      it("배열 뒤집기", function () {
         const arr = ["셋", "둘", "하나"];
         const result = arr.reverse();
 

@@ -9,11 +9,11 @@
        *
        */
 
-      it("객체 키 밸류에서 키에 함수 실행문 할당할 경우", function () {
+      it("객체의 동적 키값 다루기", function () {
         const puzzle = {};
 
         function sayHello(num) {
-          console.log(num);
+          return num + 2;
         }
 
         puzzle[sayHello(1)] = 1;
@@ -25,7 +25,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수에 중첩된 객체가 인자로 주어지는 경우", function () {
+      it("중첩된 객체 다루기", function () {
         const student = {
           name: "jj",
           age: 20,
@@ -54,7 +54,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열의 요소로 함수가 있을 때", function () {
+      it("배열의 요소인 함수 다루기", function () {
         function double(x) {
           return x * 2;
         }
@@ -75,7 +75,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 안에 객체가 요소로 있는 경우", function () {
+      it("배열의 요소인 객체 다루기", function () {
         const arr = [
           {
             name: "ken",
@@ -103,7 +103,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("객체 키 밸류에서 밸류가 배열인 경우", function () {
+      it("객체 내부의 배열 다루기", function () {
         function calculateTotalProfit(account) {
           let totalProfit = 0;
 
@@ -138,7 +138,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 요소 중간에서 빼기", function () {
+      it("배열 요소 제거하기", function () {
         /* (참고) Math.floor (https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
         const a = Math.floor(2.1); // 2
         const b = Math.floor(2.6); // 2
@@ -154,7 +154,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 앞에서부터 하나씩 순회하기", function () {
+      it("배열 순회하기 #1", function () {
         const arr = [4, 9, 12];
         let result;
 
@@ -169,7 +169,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 뒤에서부터 하나씩 순회하기", function () {
+      it("배열 순회하기 #2", function () {
         const arr = ["h", "e", "l", "l", "o"];
 
         function reverseArr(arr) {
@@ -188,7 +188,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 앞에서부터 두개씩 순회하기", function () {
+      it("배열 순회하기 #3", function () {
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 
@@ -203,7 +203,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열 뒤에서부터 두개씩 순회하기", function () {
+      it("배열 순회하기 #4", function () {
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 

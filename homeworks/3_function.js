@@ -9,7 +9,7 @@
        *
        */
 
-      it("함수 반환문이 없을때의 반환값", function () {
+      it("함수의 반환값 #1", function () {
         function foo() {}
 
         const result = foo();
@@ -18,7 +18,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 반환문이 없을때의 반환값", function () {
+      it("함수의 반환값 #2", function () {
         function sayHello() {
           console.log("Hello, World!");
         }
@@ -29,7 +29,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 인자는 있고, 반환문은 없을 때의 반환값", function () {
+      it("함수의 반환값 #3", function () {
         function sayHello(name) {
           console.log(`Hello, ${name}`);
         }
@@ -40,7 +40,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 반환문이 있을 때의 반환값", function () {
+      it("함수의 반환값 #4", function () {
         function foo() {
           return NaN || 7;
         }
@@ -51,7 +51,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 인자와 반환문이 있을 때의 반환값", function () {
+      it("함수의 반환값 #5", function () {
         function add(x, y) {
           return x + y;
         }
@@ -62,7 +62,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 인자와 반환문이 있을 때의 반환값", function () {
+      it("함수의 반환값 #6", function () {
         function echo(word, times) {
           return word.repeat(times);
         }
@@ -84,7 +84,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 내에 조건문이 있을 때의 반환 값", function () {
+      it("함수의 반환값 #7", function () {
         function isPositive(num) {
           if (num > 0) {
             return true;
@@ -99,7 +99,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 내에 조건문이 있을 때의 반환 값", function () {
+      it("함수의 반환값 #8", function () {
         function getGrade(score) {
           if (score >= 90) {
             return "A";
@@ -116,7 +116,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 내에 반복문이 있고 반복문 내부에서 조건문에 따라서 반환할 때 반환값", function () {
+      it("함수의 반환값 #9", function () {
         function countEven(numbers) {
           let count = 0;
 
@@ -135,7 +135,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 내에 반복문이 있고 반복문 내부에서 조건문에 따라서 반환할 때 반환값", function () {
+      it("함수의 반환값 #10", function () {
         function countNotKen(names) {
           let count = names.length;
 
@@ -154,7 +154,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("배열의 요소로서 함수 실행문이 사용됐을 때 배열의 결과", function () {
+      it("배열의 요소로서 함수 실행문", function () {
         function combineValues(a, b) {
           return a + b;
         }
@@ -165,7 +165,7 @@
         expect(result[1]).to.eql(guess);
       });
 
-      it("문자열 템플릿 리터럴 내에 함수 실행문이 사용됐을때 문자열의 결과", function () {
+      it("문자열 템플릿 리터럴 내에 함수 실행문", function () {
         function sayWord(word) {
           return word;
         }
@@ -176,7 +176,7 @@
         expect(result).to.eql(guess);
       });
 
-      it("함수 내에 있는 조건문의 조건으로 또 다른 함수 실행문이 사용됐을때 함수의 결과", function () {
+      it("함수의 반환값 #11", function () {
         function divideByTwo(num) {
           return num * 2;
         }
