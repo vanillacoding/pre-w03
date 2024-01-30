@@ -139,7 +139,7 @@
         const key = "country";
         delete reservation.location[key];
 
-        const guess = 'South Korea';
+        const guess = undefined;
         expect(result).to.eql(guess);
       });
 
