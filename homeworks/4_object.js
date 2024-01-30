@@ -81,6 +81,7 @@
 
         const guess = {
           name: "Vanilla Coding",
+          url: "https://www.vanillacoding.co/",
         };
 
         guess.contact = 바코;
@@ -133,6 +134,7 @@
           },
         };
 
+        const result = reservation.location;
         const key = "country";
         delete reservation.location[key];
 
