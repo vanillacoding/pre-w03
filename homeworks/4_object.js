@@ -19,7 +19,7 @@
         person.job = "pm";
 
         const result = person.job;
-        const guess = 바코;
+        const guess = 'pm';
 
         expect(result).to.eql(guess);
       });
@@ -33,7 +33,7 @@
         person.job = "designer";
 
         const result = person.name;
-        const guess = 바코;
+        const guess = 'dd';
 
         expect(result).to.eql(guess);
       });
@@ -49,7 +49,7 @@
         employee[key] = 4;
 
         const result = employee.id;
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.eql(guess);
       });
@@ -64,7 +64,7 @@
         delete employee.years;
 
         const result = employee.years;
-        const guess = 바코;
+        const guess = 1;
 
         expect(result).to.eql(guess);
       });
@@ -83,7 +83,10 @@
           name: "Vanilla Coding",
         };
 
-        guess.contact = 바코;
+        guess.contact = {
+          email: "infor@vanillacoding.co",
+          phone: "02-6713-7279"
+        };
 
         expect(result).to.eql(guess);
       });
@@ -99,7 +102,7 @@
         };
 
         const result = company.contact.email;
-        const guess = 바코;
+        const guess = 'info@vaillacoding.co';
 
         expect(result).to.eql(guess);
       });
@@ -118,7 +121,7 @@
         const countries = ["South Korea", "Japan", "United States"];
         const result = reservation.location[countries[0]];
 
-        const guess = 바코;
+        const guess = undefined;
         expect(result).to.eql(guess);
       });
 
@@ -136,7 +139,7 @@
         const key = "country";
         delete reservation.location[key];
 
-        const guess = 바코;
+        const guess = 'South Korea';
         expect(result).to.eql(guess);
       });
 
@@ -152,7 +155,7 @@
         };
 
         const result = person.greeting;
-        const guess = 바코;
+        const guess = sayHello();
 
         expect(result).to.eql(guess);
       });
@@ -167,7 +170,7 @@
         person.interests.push("marketing");
 
         const result = person.interests[2];
-        const guess = 바코;
+        const guess = 'marketing';
 
         expect(result).to.eql(guess);
       });
