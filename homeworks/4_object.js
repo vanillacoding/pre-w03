@@ -75,6 +75,7 @@
           url: "https://www.vanillacoding.co/",
           contact: {
             email: "info@vanillacoding.co",
+            url: "https://www.vanillacoding.co/",
             phone: "02-6713-7279",
           },
         };
@@ -133,6 +134,7 @@
           },
         };
 
+        const result = reservation.location;
         const key = "country";
         delete reservation.location[key];
 
