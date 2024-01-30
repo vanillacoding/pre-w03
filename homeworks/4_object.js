@@ -64,7 +64,7 @@
         delete employee.years;
 
         const result = employee.years;
-        const guess = 1;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
@@ -81,10 +81,11 @@
 
         const guess = {
           name: "Vanilla Coding",
+          url: "https://www.vanillacoding.co/"
         };
 
         guess.contact = {
-          email: "infor@vanillacoding.co",
+          email: "info@vanillacoding.co",
           phone: "02-6713-7279"
         };
 
@@ -102,7 +103,7 @@
         };
 
         const result = company.contact.email;
-        const guess = 'info@vaillacoding.co';
+        const guess = 'info@vanillacoding.co';
 
         expect(result).to.eql(guess);
       });
@@ -139,7 +140,9 @@
         const key = "country";
         delete reservation.location[key];
 
-        const guess = undefined;
+        const result = reservation.location;
+
+        const guess = {city: 'Seoul'};
         expect(result).to.eql(guess);
       });
 

@@ -121,6 +121,7 @@
           let count = 0;
 
           for (let i = 0; i < numbers.length; i++) {
+            let num = numbers[i]
             if (num % 2 == 0) {
               count++;
             }
