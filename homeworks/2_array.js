@@ -11,7 +11,7 @@
 
       it("배열 만들기 #1", function () {
         const result = [1, 2, 3];
-        const guess = 바코;
+        const guess = [1, 2, 3];
 
         expect(result).to.eql(guess);
       });
