@@ -17,10 +17,13 @@
         }
 
         puzzle[sayHello(1)] = 1;
-        puzzle[sayHello(2)] = 2;
+        puzzle[sayHello(2)] = 2; 
 
         const result = puzzle;
-        const guess = 바코;
+        const guess = {
+          '3': 1,
+          '4': 2
+        };
 
         expect(result).to.eql(guess);
       });
@@ -49,7 +52,7 @@
         }
 
         const result = getPassedSubjects(student);
-        const guess = 바코;
+        const guess = ['science', 'history'];
 
         expect(result).to.eql(guess);
       });
@@ -70,7 +73,7 @@
         const functionArray = [double, square, subtractFive];
 
         const result = functionArray[2](functionArray[1](3));
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.eql(guess);
       });
@@ -80,15 +83,15 @@
           {
             name: "ken",
             job: "ceo",
-          },
+          },            
           {
             name: "leo",
             job: "pm",
-          },
+          },            
           {
             name: "dd",
             job: "designer",
-          },
+          },            
         ];
 
         for (let i = 0; i < arr.length; i++) {
@@ -98,7 +101,7 @@
         }
 
         const result = arr[2].job;
-        const guess = 바코;
+        const guess = "designer";
 
         expect(result).to.eql(guess);
       });
@@ -131,9 +134,9 @@
             },
           ],
         };
-
+        
         const result = calculateTotalProfit(account);
-        const guess = 바코;
+        const guess = 900;
 
         expect(result).to.eql(guess);
       });
@@ -145,11 +148,11 @@
          */
 
         const result = [1, 2, 3];
-        const midIndex = Math.floor(result.length / 2);
+        const midIndex = Math.floor(result.length / 2); 
 
-        result.splice(midIndex, 1);
+        result.splice(midIndex, 1); 
 
-        const guess = 바코;
+        const guess = [1, 3];
 
         expect(result).to.eql(guess);
       });
@@ -164,7 +167,7 @@
           }
         }
 
-        const guess = 바코;
+        const guess = 9;
 
         expect(result).to.eql(guess);
       });
@@ -175,15 +178,15 @@
         function reverseArr(arr) {
           const newArr = [];
 
-          for (let i = arr.length - 1; i >= 0; i--) {
+          for (let i = arr.length - 1; i >= 0; i--) { 
             newArr.push(arr[i]);
           }
 
-          return newArr;
+          return newArr; 
         }
 
         const result = reverseArr(arr);
-        const guess = 바코;
+        const guess = ["o", "l", "l", "e", "h"];
 
         expect(result).to.eql(guess);
       });
@@ -192,13 +195,13 @@
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 
-        for (let i = 0; i < arr.length; i++) {
-          if (i % 2 == 0) {
-            result.push(arr[i]);
+        for (let i = 0; i < arr.length; i++) {  
+          if (i % 2 == 0) {  
+            result.push(arr[i]); 
           }
         }
 
-        const guess = 바코;
+        const guess = [1, 5, 9, 15];
 
         expect(result).to.eql(guess);
       });
@@ -207,13 +210,13 @@
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 
-        for (let i = arr.length - 1; i >= 0; i--) {
-          if (i % 2 == 0) {
+        for (let i = arr.length - 1; i >= 0; i--) { 
+          if (i % 2 == 0) {  
             result.push(arr[i]);
           }
         }
 
-        const guess = 바코;
+        const guess = [15, 9, 5, 1]; 
 
         expect(result).to.eql(guess);
       });
