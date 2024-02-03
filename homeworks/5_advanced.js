@@ -17,7 +17,7 @@
         }
 
         puzzle[sayHello(1)] = 1;
-        puzzle[sayHello(2)] = 2; 
+        puzzle[sayHello(2)] = 2;
 
         const result = puzzle;
         const guess = {
@@ -83,15 +83,15 @@
           {
             name: "ken",
             job: "ceo",
-          },            
+          },
           {
             name: "leo",
             job: "pm",
-          },            
+          },
           {
             name: "dd",
             job: "designer",
-          },            
+          },
         ];
 
         for (let i = 0; i < arr.length; i++) {
@@ -134,7 +134,6 @@
             },
           ],
         };
-        
         const result = calculateTotalProfit(account);
         const guess = 900;
 
@@ -148,9 +147,9 @@
          */
 
         const result = [1, 2, 3];
-        const midIndex = Math.floor(result.length / 2); 
+        const midIndex = Math.floor(result.length / 2);
 
-        result.splice(midIndex, 1); 
+        result.splice(midIndex, 1);
 
         const guess = [1, 3];
 
@@ -182,7 +181,7 @@
             newArr.push(arr[i]);
           }
 
-          return newArr; 
+          return newArr;
         }
 
         const result = reverseArr(arr);
@@ -195,9 +194,9 @@
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 
-        for (let i = 0; i < arr.length; i++) {  
-          if (i % 2 == 0) {  
-            result.push(arr[i]); 
+        for (let i = 0; i < arr.length; i++) {
+          if (i % 2 == 0) {
+            result.push(arr[i]);
           }
         }
 
@@ -210,8 +209,8 @@
         const arr = [1, 4, 5, 8, 9, 12, 15];
         const result = [];
 
-        for (let i = arr.length - 1; i >= 0; i--) { 
-          if (i % 2 == 0) {  
+        for (let i = arr.length - 1; i >= 0; i--) {
+          if (i % 2 == 0) {
             result.push(arr[i]);
           }
         }
