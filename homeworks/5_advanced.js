@@ -20,7 +20,10 @@
         puzzle[sayHello(2)] = 2;
 
         const result = puzzle;
-        const guess = { 3: 1, 4: 2 };
+        const guess = {
+          3: 1,
+          4: 2,
+        };
 
         expect(result).to.eql(guess);
       });
@@ -109,7 +112,6 @@
           let totalProfit = 0;
 
           for (let i = 0; i < account.portfolio.length; i++) {
-            //3
             totalProfit += account.portfolio[i].profit;
           }
 
