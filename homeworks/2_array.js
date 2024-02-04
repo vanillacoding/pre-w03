@@ -82,7 +82,7 @@
       it("배열에서 원하는 요소 인덱스 찾기", function () {
         const arr = [1, 2, 3, 4, 5, 2, 10, 13, 2];
         const result = arr.indexOf(2, 2);
-        const guess = 2;
+        const guess = 5;
 
         expect(result).to.eql(guess);
       });
