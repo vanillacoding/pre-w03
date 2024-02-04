@@ -13,7 +13,7 @@
         function foo() {}
 
         const result = foo();
-        const guess = 바코;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
@@ -24,30 +24,30 @@
         }
 
         const result = sayHello();
-        const guess = 바코;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
-
+      /* return 값이 없으면 undefined로 */
       it("함수의 반환값 #3", function () {
         function sayHello(name) {
           console.log(`Hello, ${name}`);
         }
 
         const result = sayHello();
-        const guess = 바코;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
-
+      /* 정의되지 않은 함수 */
       it("함수의 반환값 #4", function () {
         function foo() {
           return NaN || 7;
         }
 
         const result = foo();
-        const guess = 바코;
-
+        const guess = 7; 
+        /* 왼쪽이 false 이면 오른쪽을 return */
         expect(result).to.eql(guess);
       });
 
@@ -57,7 +57,7 @@
         }
 
         const result = add(1, 5);
-        const guess = 바코;
+        const guess = 6;
 
         expect(result).to.eql(guess);
       });
@@ -68,7 +68,7 @@
         }
 
         const result = echo("수박", 3);
-        const guess = 바코;
+        const guess = "수박수박수박";
 
         expect(result).to.eql(guess);
       });
@@ -79,11 +79,11 @@
         }
 
         const result = sayHello() && "vaco";
-        const guess = 바코;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
-
+    /* console.log는 undefined를 반환 */
       it("함수의 반환값 #7", function () {
         function isPositive(num) {
           if (num > 0) {
@@ -94,7 +94,7 @@
         }
 
         const result = isPositive(1);
-        const guess = 바코;
+        const guess = true;
 
         expect(result).to.eql(guess);
       });
@@ -111,7 +111,7 @@
         }
 
         const result = getGrade(80);
-        const guess = 바코;
+        const guess = "B";
 
         expect(result).to.eql(guess);
       });
@@ -130,7 +130,7 @@
         }
 
         const result = countEven([1, 2, 3, 4, 5, 6]);
-        const guess = 바코;
+        const guess = 3;
 
         expect(result).to.eql(guess);
       });
@@ -149,7 +149,7 @@
         }
 
         const result = countNotKen(["ken", "kenny", "kony", "ken", "ken"]);
-        const guess = 바코;
+        const guess = 3;
 
         expect(result).to.eql(guess);
       });
@@ -160,7 +160,7 @@
         }
 
         const result = [combineValues("a", "bc"), combineValues("d", "ef")];
-        const guess = 바코;
+        const guess = "def";
 
         expect(result[1]).to.eql(guess);
       });
@@ -171,7 +171,7 @@
         }
 
         const result = `Hello, ${sayWord("World")}`;
-        const guess = 바코;
+        const guess = "Hello, World";
 
         expect(result).to.eql(guess);
       });
@@ -194,7 +194,7 @@
         }
 
         const result = calculate(5);
-        const guess = 바코;
+        const guess = 25;
 
         expect(result).to.eql(guess);
       });
