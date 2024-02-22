@@ -217,6 +217,58 @@
 
         expect(result).to.eql(guess);
       });
+
+      describe("indexOf 함수 직접 만들어보기", function () {
+        /*
+         *
+         * indexOf 함수 내부 로직을 수정하여
+         * indexOf 관련 테스트가 모두 통과되도록 완성해주세요.
+         *
+         */
+        function indexOf(list, target) {
+          // [시작] 여러분의 로직을 아래에 작성해주세요.
+          return 0;
+          // [끝] 여러분의 로직을 위에 작성해주세요.
+        }
+
+        it("주어진 배열에 원하는 요소가 존재할 경우, 해당 요소의 인덱스를 반환해야 한다.", function () {
+          const numbers1 = [10, 20, 30, 40, 50];
+          const result1 = indexOf(numbers1, 40);
+
+          expect(result1).to.eql(3);
+
+          const numbers2 = [88, 37, 10, 9, 100, 40, 1, 11, 43, 89];
+          const result2 = indexOf(numbers2, 1);
+
+          expect(result2).to.eql(6);
+
+          const numbers3 = [
+            100, -100, -200, -300, 400, 30, 0, 70, 3, 1000, 90, 1,
+          ];
+          const result3 = indexOf(numbers3, 1);
+
+          expect(result3).to.eql(11);
+        });
+
+        it("주어진 배열에 원하는 요소가 존재하지 않을 경우, -1을 반환해야 한다.", function () {
+          const numbers1 = [10, 20, 30, 40, 50];
+          const result1 = indexOf(numbers1, 3);
+
+          expect(result1).to.eql(-1);
+
+          const numbers2 = [88, 37, 10, 9, 100, 40, 1, 11, 43, 89];
+          const result2 = indexOf(numbers2, 0);
+
+          expect(result2).to.eql(-1);
+
+          const numbers3 = [
+            100, -100, -200, -300, 400, 30, 0, 70, 3, 1000, 90, 1,
+          ];
+          const result3 = indexOf(numbers3, 999);
+
+          expect(result3).to.eql(-1);
+        });
+      });
     });
   });
 })();
