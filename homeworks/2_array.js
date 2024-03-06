@@ -11,7 +11,7 @@
 
       it("배열 만들기 #1", function () {
         const result = [1, 2, 3];
-        const guess = 바코;
+        const guess = [1, 2, 3];
 
         expect(result).to.eql(guess);
       });
@@ -20,7 +20,10 @@
         const result = [];
 
         let guess = [1, 2, 3];
-        guess = 바코;
+        delete guess[0];
+        delete guess[1];
+        delete guess[2];
+
 
         expect(result).to.eql(guess);
       });
@@ -29,6 +32,7 @@
         const result = [];
 
         const guess = [1, 2, 3];
+        const 바코 = [];
         guess.length = 바코;
 
         expect(result).to.eql(guess);
@@ -38,13 +42,13 @@
         const result = [];
 
         const guess = [1, 2, 3];
-        guess.splice(바코, guess.length);
+        guess.splice(0, guess.length);
 
         expect(result).to.eql(guess);
       });
 
       it("배열 요소 추가하기", function () {
-        const result = 바코;
+        const result = [1, 2, 3, 4];
 
         const guess = [1, 2, 3];
         guess.push(4);
@@ -56,7 +60,7 @@
         const result = [1, 2, 3];
         result.unshift(5);
 
-        const guess = 바코;
+        const guess = [5, 1, 2, 3];
 
         expect(result).to.eql(guess);
       });
@@ -65,7 +69,7 @@
         const result = [1, 2, 3];
         result.pop();
 
-        const guess = 바코;
+        const guess = [1, 2];
 
         expect(result).to.eql(guess);
       });
@@ -74,7 +78,7 @@
         const result = [1, 2, 3];
         result.shift();
 
-        const guess = 바코;
+        const guess = [2, 3];
 
         expect(result).to.eql(guess);
       });
@@ -82,7 +86,7 @@
       it("배열에서 원하는 요소 인덱스 찾기", function () {
         const arr = [1, 2, 3, 4, 5, 2, 10, 13, 2];
         const result = arr.indexOf(2, 2);
-        const guess = 바코;
+        const guess = 5;
 
         expect(result).to.eql(guess);
       });
@@ -90,7 +94,7 @@
       it("배열에서 원하는 요소 찾기", function () {
         const arr = [1, 2, 3, 4, 5, 2, 10, 13, 2];
         const result = arr.includes(2, 2);
-        const guess = 바코;
+        const guess = true;
 
         expect(result).to.eql(guess);
       });
@@ -100,7 +104,7 @@
         const arr2 = [1, 4, 2];
         const result = arr1.concat(arr2);
 
-        const guess = 바코;
+        const guess = [1, 2, 3, 1, 4, 2];
 
         expect(result).to.eql(guess);
       });
@@ -108,7 +112,7 @@
       it("배열 여부 확인하기", function () {
         const arr = [1, 2, 3];
         const result = Array.isArray(arr);
-        const guess = 바코;
+        const guess = true;
 
         expect(result).to.eql(guess);
       });
@@ -117,7 +121,7 @@
         const arr = ["010", 1234, 5678];
         const result = arr.join("-");
 
-        const guess = 바코;
+        const guess = "010-1234-5678";
 
         expect(result).to.eql(guess);
       });
@@ -126,7 +130,7 @@
         const arr = ["셋", "둘", "하나"];
         const result = arr.reverse();
 
-        const guess = 바코;
+        const guess = ["하나", "둘", "셋"];
 
         expect(result).to.eql(guess);
       });
