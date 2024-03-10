@@ -20,7 +20,9 @@
         puzzle[sayHello(2)] = 2;
 
         const result = puzzle;
-        const guess = 바코;
+        const guess = {
+          3: 1, 4: 2
+        };
 
         expect(result).to.eql(guess);
       });
@@ -37,9 +39,9 @@
         };
 
         function getPassedSubjects(student) {
-          const passedSubjects = [];
+          const passedSubjects = [];  // 변수를 선언하면 이 함수 내부에서 밖에 못쓴다.
 
-          for (const subject in student.grades) {
+          for (const subject in student.grades) { //
             if (student.grades[subject] >= 80) {
               passedSubjects.push(subject);
             }
@@ -49,7 +51,7 @@
         }
 
         const result = getPassedSubjects(student);
-        const guess = 바코;
+        const guess = ['science', 'history'];
 
         expect(result).to.eql(guess);
       });
@@ -70,7 +72,7 @@
         const functionArray = [double, square, subtractFive];
 
         const result = functionArray[2](functionArray[1](3));
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.eql(guess);
       });
@@ -98,7 +100,7 @@
         }
 
         const result = arr[2].job;
-        const guess = 바코;
+        const guess = "designer";
 
         expect(result).to.eql(guess);
       });
@@ -108,7 +110,7 @@
           let totalProfit = 0;
 
           for (let i = 0; i < account.portfolio.length; i++) {
-            totalProfit += account.portfolio[i].profit;
+            totalProfit += account.portfolio[i].profit; // totalProfit = totalProfit + account.portfolio[i].profit;
           }
 
           return totalProfit;
@@ -133,7 +135,7 @@
         };
 
         const result = calculateTotalProfit(account);
-        const guess = 바코;
+        const guess = 900;
 
         expect(result).to.eql(guess);
       });
@@ -149,7 +151,7 @@
 
         result.splice(midIndex, 1);
 
-        const guess = 바코;
+        const guess = [1, 3];
 
         expect(result).to.eql(guess);
       });
@@ -159,12 +161,12 @@
         let result;
 
         for (let i = 0; i < arr.length; i++) {
-          if (i % 2 === 1) {
+          if (i % 2 === 1) {  // 수학적 개념에서 나머지, 계산을 끝까지 하지 말고.(1/2 = 0.5 지만, 나머지는 1이지..)
             result = arr[i];
           }
         }
 
-        const guess = 바코;
+        const guess = 9;
 
         expect(result).to.eql(guess);
       });
@@ -183,7 +185,7 @@
         }
 
         const result = reverseArr(arr);
-        const guess = 바코;
+        const guess = ["o", "l", "l", "e", "h"];
 
         expect(result).to.eql(guess);
       });
@@ -198,7 +200,7 @@
           }
         }
 
-        const guess = 바코;
+        const guess = [1, 5, 9, 15];
 
         expect(result).to.eql(guess);
       });
@@ -213,7 +215,7 @@
           }
         }
 
-        const guess = 바코;
+        const guess = [15, 9, 5, 1];
 
         expect(result).to.eql(guess);
       });
@@ -226,9 +228,16 @@
          *
          */
         function indexOf(list, target) {
-          // [시작] 여러분의 로직을 아래에 작성해주세요.
-          return 0;
-          // [끝] 여러분의 로직을 위에 작성해주세요.
+          // 각 요소를 루프 한번 돌려본다.
+          for (let i = 0; i < list.length; i++) {
+            // 현재 요소를 넣었을 시 target 값과 정확히 일치하는지 확인
+            if (list[i] === target) {
+              // 위의 조건이 만족할시, 해당 요소의 인덱스를 반환.
+              return i;
+            }
+          }
+          // 맞는 값이 없다면, -1을 반환한다.
+          return -1;
         }
 
         it("주어진 배열에 원하는 요소가 존재할 경우, 해당 요소의 인덱스를 반환해야 한다.", function () {
