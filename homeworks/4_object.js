@@ -19,7 +19,7 @@
         person.job = "pm";
 
         const result = person.job;
-        const guess = 바코;
+        const guess = "pm";
 
         expect(result).to.eql(guess);
       });
@@ -29,11 +29,11 @@
           name: "leo",
         };
 
-        person.name = "dd";
+        person.name = "dd"; // newly added ore replaced?
         person.job = "designer";
 
         const result = person.name;
-        const guess = 바코;
+        const guess = "dd";
 
         expect(result).to.eql(guess);
       });
@@ -46,10 +46,10 @@
         };
 
         const key = "id";
-        employee[key] = 4;
+        employee[key] = 4;  // = employee.key = 4
 
         const result = employee.id;
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.eql(guess);
       });
@@ -64,7 +64,7 @@
         delete employee.years;
 
         const result = employee.years;
-        const guess = 바코;
+        const guess = undefined;
 
         expect(result).to.eql(guess);
       });
@@ -84,7 +84,10 @@
           url: "https://www.vanillacoding.co/",
         };
 
-        guess.contact = 바코;
+        guess.contact = { //contact 라는 키값 추가해서 result랑 같게 만들기?
+          email: "info@vanillacoding.co",
+          phone: "02-6713-7279",
+        };
 
         expect(result).to.eql(guess);
       });
@@ -100,7 +103,7 @@
         };
 
         const result = company.contact.email;
-        const guess = 바코;
+        const guess = "info@vanillacoding.co";
 
         expect(result).to.eql(guess);
       });
@@ -119,7 +122,7 @@
         const countries = ["South Korea", "Japan", "United States"];
         const result = reservation.location[countries[0]];
 
-        const guess = 바코;
+        const guess = undefined;
         expect(result).to.eql(guess);
       });
 
@@ -138,7 +141,9 @@
         const key = "country";
         delete reservation.location[key];
 
-        const guess = 바코;
+        const guess = {
+          city: "Seoul"
+        }
         expect(result).to.eql(guess);
       });
 
@@ -154,7 +159,7 @@
         };
 
         const result = person.greeting;
-        const guess = 바코;
+        const guess = undefined;  //함수 sayHello() 에 return 이 안보인다? = undefined 다?
 
         expect(result).to.eql(guess);
       });
@@ -169,7 +174,7 @@
         person.interests.push("marketing");
 
         const result = person.interests[2];
-        const guess = 바코;
+        const guess = "marketing";
 
         expect(result).to.eql(guess);
       });
