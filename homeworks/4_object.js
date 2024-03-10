@@ -68,7 +68,6 @@
 
         expect(result).to.eql(guess);
       });
-      /* undefined : 존재하지 않거나 사라진 객체값일 경우 출력 */
       it("중첩된 객체 다루기 #1", function () {
         const result = {
           name: "Vanilla Coding",
