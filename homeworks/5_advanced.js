@@ -20,7 +20,7 @@
         puzzle[sayHello(2)] = 2;
 
         const result = puzzle;
-        const guess = 바코;
+        const guess = { "3": 1, "4": 2 };
 
         expect(result).to.eql(guess);
       });
@@ -49,7 +49,7 @@
         }
 
         const result = getPassedSubjects(student);
-        const guess = 바코;
+        const guess = ["science", "history"];
 
         expect(result).to.eql(guess);
       });
@@ -70,7 +70,7 @@
         const functionArray = [double, square, subtractFive];
 
         const result = functionArray[2](functionArray[1](3));
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.eql(guess);
       });
@@ -98,7 +98,7 @@
         }
 
         const result = arr[2].job;
-        const guess = 바코;
+        const guess = "designer";
 
         expect(result).to.eql(guess);
       });
@@ -133,7 +133,7 @@
         };
 
         const result = calculateTotalProfit(account);
-        const guess = 바코;
+        const guess = 900;
 
         expect(result).to.eql(guess);
       });
@@ -149,7 +149,7 @@
 
         result.splice(midIndex, 1);
 
-        const guess = 바코;
+        const guess = [1, 3];
 
         expect(result).to.eql(guess);
       });
@@ -164,7 +164,7 @@
           }
         }
 
-        const guess = 바코;
+        const guess = 9;
 
         expect(result).to.eql(guess);
       });
@@ -183,7 +183,7 @@
         }
 
         const result = reverseArr(arr);
-        const guess = 바코;
+        const guess = ["o", "l", "l", "e", "h"];
 
         expect(result).to.eql(guess);
       });
@@ -193,12 +193,12 @@
         const result = [];
 
         for (let i = 0; i < arr.length; i++) {
-          if (i % 2 == 0) {
+          if (i % 2 === 0) {
             result.push(arr[i]);
           }
         }
 
-        const guess = 바코;
+        const guess = [1, 5, 9, 15];
 
         expect(result).to.eql(guess);
       });
@@ -208,12 +208,12 @@
         const result = [];
 
         for (let i = arr.length - 1; i >= 0; i--) {
-          if (i % 2 == 0) {
+          if (i % 2 === 0) {
             result.push(arr[i]);
           }
         }
 
-        const guess = 바코;
+        const guess = [15, 9, 5, 1];
 
         expect(result).to.eql(guess);
       });
@@ -227,7 +227,12 @@
          */
         function indexOf(list, target) {
           // [시작] 여러분의 로직을 아래에 작성해주세요.
-          return 0;
+          for(let i = 0; i < list.length; i ++) {
+            if(list[i] === target) {
+              return i;
+            }
+          }
+          return -1;
           // [끝] 여러분의 로직을 위에 작성해주세요.
         }
 
